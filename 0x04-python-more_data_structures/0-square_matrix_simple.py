@@ -2,5 +2,5 @@
 def square_matrix_simple(matrix=[]):
     for i in matrix:
         for j in i:
-            j = j ** 2
+            matrix[i][j] *= matrix[i][j]
     return matrix
