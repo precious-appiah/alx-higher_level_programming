@@ -36,6 +36,9 @@ class Square:
             self.__size = value
 
     def my_print(self):
+        """print size passed
+        is size is zero print am empty line
+        """
         if self.__size == 0:
             print("\n")
         else:
