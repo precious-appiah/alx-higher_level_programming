@@ -5,7 +5,7 @@ def list_division(my_list_1, my_list_2, list_length):
     try:
         for j, k in zip(my_list_1, my_list_2):
             try:
-                if isinstance(j, (int, float)) and  isinstance(k, (int, float)):
+                if isinstance(j, (int, float)) and isinstance(k, (int, float)):
                     res = j / k
                     new_list.append(res)
                 else:
