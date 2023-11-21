@@ -14,4 +14,4 @@ class Square:
         """this is an init
             size is the private variable
             """
-        self.size = size
+        self.__size = size
