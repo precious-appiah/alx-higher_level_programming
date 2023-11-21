@@ -9,7 +9,7 @@ class Square:
 
     """This is a class doc describong what a square is"""
 
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
 
         """this is an init
             size is the private variable
@@ -18,7 +18,7 @@ class Square:
             """
         self.__size = size
         try:
-            if not isinstance (self.__size, int):
+            if not isinstance(self.__size, int):
                 raise TypeError("size must be an integer")
             if size < 0:
                 raise ValueError("size must be >= 0")
@@ -26,4 +26,3 @@ class Square:
             print("{}".format(err))
         except ValueError as err:
             print("{}".format(err))
-
