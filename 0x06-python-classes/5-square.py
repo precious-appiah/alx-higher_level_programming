@@ -30,7 +30,7 @@ class Square:
     def size(self, value):
         """setter for setting size
         """
-        if not isinstance(value, it):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -44,7 +44,8 @@ class Square:
         if self.__size == 0:
             print("\n")
         else:
-            return '\n'.join('#' * self.__size ** 2 for _in range(self.__size))
+            x =  '\n'.join('#' * self.__size  for _in range(self.__size))
+            print(x)
 
     def area(self):
         """public instance method
