@@ -44,7 +44,7 @@ class Square:
         if self.__size == 0:
             print("\n")
         else:
-            x =  '\n'.join('#' * self.__size  for _in range(self.__size))
+            x =  '\n'.join('#' * self.__size  for _ in range(self.__size))
             print(x)
 
     def area(self):
