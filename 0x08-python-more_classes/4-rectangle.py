@@ -66,4 +66,6 @@ class Rectangle:
         return rect
 
     def __repr__(self):
+        if self.__width == 0 or self.height == 0:
+            return f"R*ectancgle('')"
         return f"Rectangle({self.__width}, {self.__height})"
