@@ -59,7 +59,7 @@ class Rectangle:
 
     def __str__(self):
         rect = ''
-        for i in range(height):
-            rect += "#" * width + '\n'
+        for i in range(self.__height):
+            rect += "#" * self.__width + '\n'
         return rect
 
