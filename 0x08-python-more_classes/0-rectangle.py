@@ -3,8 +3,8 @@
 """ module describing a class square"""
 
 
-class Square:
+class Rectangle:
 
-    """ square class"""
+    """ rectangle class that describes a rectangle"""
 
     pass
