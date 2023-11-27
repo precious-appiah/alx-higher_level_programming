@@ -64,6 +64,7 @@ class Rectangle:
         for i in range(self.__height):
             rect += "#" * self.__width + '\n'
         return rect
+
     def __repr__(self):
         rect = ''
         if self.__width == 0 or self.height == 0:
