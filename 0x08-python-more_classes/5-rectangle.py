@@ -75,4 +75,3 @@ class Rectangle:
         """function for deleting instance of a class"""
 
         print("Bye rectangle...")
-
