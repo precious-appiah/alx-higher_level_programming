@@ -71,7 +71,10 @@ class Rectangle:
         if isinstance(self.print_symbol, list):
             symbol = '[' + ', '.join(map(str, self.print_symbol)) + ']'
         for i in range(self.__height):
-            rect += symbol * self.__width + '\n'
+            if (i == self.__height - 1):
+                rect += symbol * self.__width
+            else:
+                rect += symbol * self.__width + '\n'
         return rect
 
     def __repr__(self):
