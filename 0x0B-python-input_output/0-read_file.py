@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 
 
 """ module to open file and writhe content to stdout"""
