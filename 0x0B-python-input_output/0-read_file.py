@@ -6,8 +6,7 @@
 
 def read_file(filename=""):
 
-    """  function that reads file 
-    an write to output"""
+    """  function that reads file an write to output"""
 
     with open(filename, 'r', encoding='utf-8') as f:
         content = f.read()
