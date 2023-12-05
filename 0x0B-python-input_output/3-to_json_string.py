@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import json
+
 
 """module to return json rep of string"""
 
