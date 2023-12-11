@@ -45,7 +45,7 @@ class Rectangle(Base):
 
         """getter for height"""
 
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, height):
@@ -83,7 +83,7 @@ class Rectangle(Base):
 
         """getter for y"""
 
-        return y
+        return self.__y
 
     @y.setter
     def y(self, y):
