@@ -35,7 +35,7 @@ class Rectangle(Base):
 
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
-        if width <= 0:
+        elif width <= 0:
             raise ValueError("width must be > 0")
         else:
             self.__width = width
@@ -54,9 +54,10 @@ class Rectangle(Base):
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
-        if height <= 0:
+        elif height <= 0:
             raise ValueError("height must be > 0")
-        self.__height = height
+        else:
+            self.__height = height
 
     @property
     def x(self):
@@ -72,9 +73,10 @@ class Rectangle(Base):
 
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
-        if x <= 0:
+        elif x <= 0:
             raise ValueError("x must be > 0")
-        self.__x = x
+        else:
+            self.__x = x
 
     @property
     def y(self):
@@ -90,7 +92,32 @@ class Rectangle(Base):
 
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
-        if y <= 0:
+       elif y <= 0:
             raise ValueError("y must be > 0")
         else:
             self.__y = y
+
+    def area(self):
+
+        """return area """
+
+        return self.__width * self.__height
+
+    def display(self):
+
+        """function to primt # height by width"""
+
+        rect = ''
+
+        for i in range(self.__height):
+            rect += "#" * self.__width
+            if (i == self.__height - 1):
+                print("{}".format(rect))
+            else:
+                print("{}\n".format(rect))
+
+    def __str__(self):
+
+        """function to print string in a certain format"""
+
+        return f"[Rectangle] {(self.id)} {self.__x}/{self.__y} - {self.__width}/{self.__height"
