@@ -107,17 +107,27 @@ class Rectangle(Base):
 
         """function to primt # height by width"""
 
-        rect = ''
+        for _ in range(self.__y):
+            print()
 
         for i in range(self.__height):
-            rect += "#" * self.__width
-            if (i == self.__height - 1):
-                print("{}".format(rect))
-            else:
-                print("{}\n".format(rect))
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
 
         """function to print string in a certain format"""
 
-        return f"[Rectangle] {(self.id)} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args, **kwargs):
+
+        """function to update values"""
+
+        if args is not None and len(args) > 0:
+            attributes =['id', 'width', 'height', 'x', 'y']
+            for i, arg in enumerate(args):
+                if i < len(attributes) and arg is not None:
+                    setattr(self, attributes[i], arg)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
