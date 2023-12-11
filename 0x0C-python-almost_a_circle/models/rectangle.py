@@ -92,7 +92,7 @@ class Rectangle(Base):
 
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
-       elif y <= 0:
+        elif y <= 0:
             raise ValueError("y must be > 0")
         else:
             self.__y = y
@@ -120,4 +120,4 @@ class Rectangle(Base):
 
         """function to print string in a certain format"""
 
-        return f"[Rectangle] {(self.id)} {self.__x}/{self.__y} - {self.__width}/{self.__height"
+        return f"[Rectangle] {(self.id)} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
