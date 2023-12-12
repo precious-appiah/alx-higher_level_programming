@@ -113,9 +113,10 @@ class Rectangle(Base):
 
         """function to print string in a certain format"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                      self.__x, self.__y,
-                                                      self.__width, self.__height)
+        return (
+                f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}"
+                )
 
     def update(self, *args, **kwargs):
 
