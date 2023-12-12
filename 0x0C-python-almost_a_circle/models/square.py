@@ -3,7 +3,7 @@
 this is a module to define a square
 class square inherits from a rectactangle
 """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -20,8 +20,7 @@ class Square(Rectangle):
 
         """function to return a str"""
 
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                 self.width)
+        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}"
 
     @property
     def size(self):
