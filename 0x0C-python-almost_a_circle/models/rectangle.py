@@ -1,27 +1,21 @@
 #!/usr/bin/python3
-
-
 """
 module to define a rectangle
 """
-
-
 from models.base import Base
 
 
 class Rectangle(Base):
-
     """Class Rectangle inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-
         """constructor to class rectangle"""
 
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -39,8 +33,8 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         elif width <= 0:
             raise ValueError("width must be > 0")
-        else:
-            self.__width = width
+
+        self.__width = width
 
     @property
     def height(self):
@@ -58,8 +52,8 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
-        else:
-            self.__height = height
+
+        self.__height = height
 
     @property
     def x(self):
@@ -77,8 +71,8 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         elif x <= 0:
             raise ValueError("x must be > 0")
-        else:
-            self.__x = x
+
+        self.__x = x
 
     @property
     def y(self):
@@ -96,8 +90,8 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif y <= 0:
             raise ValueError("y must be > 0")
-        else:
-            self.__y = y
+
+        self.__y = y
 
     def area(self):
 
@@ -119,8 +113,9 @@ class Rectangle(Base):
 
         """function to print string in a certain format"""
 
-        return f"[Rectangle]({self.id})
-    {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return "[Rectangle]({}) {}/{} - {}/{}".format(self.id,
+                                                      self.x, self.y,
+                                                      self.width, self.height)
 
     def update(self, *args, **kwargs):
 
