@@ -6,7 +6,7 @@ module to define a rectangle
 """
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -119,14 +119,15 @@ class Rectangle(Base):
 
         """function to print string in a certain format"""
 
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle]({self.id})
+    {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
 
         """function to update values"""
 
         if args is not None and len(args) > 0:
-            attributes =['id', 'width', 'height', 'x', 'y']
+            attributes = ['id', 'width', 'height', 'x', 'y']
             for i, arg in enumerate(args):
                 if i < len(attributes) and arg is not None:
                     setattr(self, attributes[i], arg)
