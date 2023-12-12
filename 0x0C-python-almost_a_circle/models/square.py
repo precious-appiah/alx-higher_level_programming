@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-
-
 """
 this is a module to define a square
 class square inherits from a rectactangle
 """
-
 from rectangle import Rectangle
 
 
@@ -23,7 +20,8 @@ class Square(Rectangle):
 
         """function to return a str"""
 
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
