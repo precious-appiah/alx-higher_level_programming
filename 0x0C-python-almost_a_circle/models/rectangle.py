@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 
-""" module to define a rectangle """
+"""
+module to define a rectangle
+"""
 
 
 from base import Base
