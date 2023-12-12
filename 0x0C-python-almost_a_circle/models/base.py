@@ -18,6 +18,6 @@ class Base:
 
         if id is None:
             i = Base.__nb_objects + 1
-            self.id = i 
+            self.id = i
         else:
             self.id = id
