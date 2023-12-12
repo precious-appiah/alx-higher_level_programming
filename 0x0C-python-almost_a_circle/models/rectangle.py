@@ -6,10 +6,10 @@ module to define a rectangle
 """
 
 
-import base
+from base import Base
 
 
-class Rectangle(base.Base):
+class Rectangle(Base):
 
     """Class Rectangle inherits from Base"""
 
