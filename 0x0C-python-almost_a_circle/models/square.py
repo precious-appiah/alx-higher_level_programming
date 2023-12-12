@@ -14,7 +14,7 @@ class Square(Rectangle):
     """this class contanins attributes and methods of a square"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        
+
         """function to initialize an instance of square class"""
 
         super().__init__(size, size, x, y, id)
