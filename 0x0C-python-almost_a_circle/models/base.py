@@ -17,6 +17,7 @@ class Base:
         """ constructor """
 
         if id is None:
-            self.id = Base.__nb_objects + 1
+            i = Base.__nb_objects + 1
+            self.id = i 
         else:
             self.id = id

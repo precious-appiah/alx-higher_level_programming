@@ -24,3 +24,18 @@ class Square(Rectangle):
         """function to return a str"""
 
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    @property
+    def size(self):
+
+        """getter to return size"""
+
+        return self.width
+
+    @size.setter
+    def size(self, size):
+
+        """setter for size"""
+
+        self.width = size
+        self.height = size
