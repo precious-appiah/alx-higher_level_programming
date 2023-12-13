@@ -59,7 +59,7 @@ class Base:
     @staticmethod
     def def create(cls, **dictionary):
 
-        """function to return an instance with set value"""
+        """function to return an instance with set **dictionary"""
 
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(2, 3, 1)
