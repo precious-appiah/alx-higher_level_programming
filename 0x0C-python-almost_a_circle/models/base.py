@@ -20,8 +20,11 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
 
         """function to convert list of dicts to json"""
 
-        json.dumps(list_dictionaries)
+        if list is None or len(list) <= 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
