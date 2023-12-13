@@ -59,7 +59,7 @@ class Base:
     @staticmethod
     def create(cls, **dictionary):
 
-        """function to returns an instance with all 
+        """function to returns an instance with all
         attributes set using **dictionary"""
 
         if cls.__name__ == "Rectangle":
