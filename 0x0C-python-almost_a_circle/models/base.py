@@ -63,9 +63,9 @@ class Base:
         attributes set using **dictionary"""
 
         if cls.__name__ == "Rectangle":
-            dummy_instance = cls(1, 1)
+            dummy_instance = cls(1, 1, 1, 1)
         elif cls.__name__ == "Square":
-            dummy_instance = cls(1)
+            dummy_instance = cls(1, 2, 2)
         else:
             raise NotImplementedError("create method not implemented")
 
