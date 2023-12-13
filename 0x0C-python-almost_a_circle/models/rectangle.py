@@ -71,8 +71,8 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         elif x < 0:
             raise ValueError("x must be >= 0")
-
-        self.__x = x
+        else:
+            self.__x = x
 
     @property
     def y(self):
@@ -90,8 +90,8 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be >= 0")
-
-        self.__y = y
+        else:
+            self.__y = y
 
     def area(self):
 
