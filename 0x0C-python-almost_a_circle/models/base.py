@@ -3,6 +3,8 @@
 module to contain all that we've learnt
 """
 
+import json
+
 
 class Base:
     """base class for the project"""
@@ -17,3 +19,9 @@ class Base:
             self.id = type(self).__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+
+        """function to convert list of dicts to json"""
+
+        json.dumps(list_dictionaries)
