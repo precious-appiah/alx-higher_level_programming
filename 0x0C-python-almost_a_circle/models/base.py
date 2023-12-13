@@ -69,3 +69,4 @@ class Base:
             raise NotImplementedError("create method not implemented")
 
         dummy_instance.update(**dictionary)
+        return dummy_instance
