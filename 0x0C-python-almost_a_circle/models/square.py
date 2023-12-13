@@ -46,3 +46,6 @@ class Square(Rectangle):
             for i, arg in enumerate(args):
                 if i < len(attributes) and arg is not None:
                     setattr(self, attributes[i], arg)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
