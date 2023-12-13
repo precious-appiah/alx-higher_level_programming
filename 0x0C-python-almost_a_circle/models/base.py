@@ -45,3 +45,13 @@ class Base:
 
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(data)
+
+    @staticmethod
+    def from_json_string(json_string):
+
+        """function to parse json data"""
+
+        if json_string is not None:
+            return json.loads(json_string)
+        else:
+            return []
