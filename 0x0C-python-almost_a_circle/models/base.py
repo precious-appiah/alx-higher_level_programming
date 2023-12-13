@@ -62,7 +62,7 @@ class Base:
         """function to returns an instance with all
         attributes set using **dictionary"""
 
-        dummy_instance = cls(1, 1)   
+        dummy_instance = cls(1, 1)
 
         dummy_instance.update(**dictionary)
         return dummy_instance
