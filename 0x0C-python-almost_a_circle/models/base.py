@@ -35,7 +35,7 @@ class Base:
 
         """class method that saves json rep of pthon obj to file"""
 
-        data = to_json_string(list_objs) if list_objs is not None > 0 else []
+        data = cls.to_json_string(list_objs) if list_objs is not None else []
 
         filename = f"{cls.__name__}.json"
 
