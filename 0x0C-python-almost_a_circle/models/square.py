@@ -36,3 +36,13 @@ class Square(Rectangle):
 
         self.width = size
         self.height = size
+
+    def update(self, *args, **kwargs):
+
+        """function to update params"""
+
+        attributes = ['id', 'size', 'x', 'y']
+        if args is not None and len(args > 0):
+            for i, arg in enumerate(args):
+                if i < len(attributes) and arg is not None:
+                    setattr(self, attributes[i], arg)
