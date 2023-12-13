@@ -55,3 +55,17 @@ class Base:
             return json.loads(json_string)
         else:
             return []
+
+    @staticmethod
+    def def create(cls, **dictionary):
+
+        """function to return an instance with set value"""
+
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(2, 3, 1)
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1, 2)
+        else:
+            raise NotImplementedError("create method not implemented")
+
+        dummy_instance.update(**dictionary)
