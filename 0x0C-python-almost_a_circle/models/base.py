@@ -63,11 +63,12 @@ class Base:
         attributes set using **dictionary"""
 
         if cls.__name__ == "Rectangle":
-            dummy_instance = cls(width=1, height=1, x=1, y=1)
+            dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
-            dummy_instance = cls(size=1, x=1, y=1)
+            dummy_instance = cls(1)
         else:
-            raise NotImplementedError("create method not implemented")
+            raise NotImplementedError("create method not implemented \
+                    for class {}".format(cls.__name__))
 
         dummy_instance.update(**dictionary)
         return dummy_instance
