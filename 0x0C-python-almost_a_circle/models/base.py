@@ -55,8 +55,3 @@ class Base:
             return json.loads(json_string)
         else:
             return []
-
-    @staticmethod
-    def def create(cls, **dictionary):
-
-        """function to return an instance with set **dictionary"""
