@@ -29,3 +29,15 @@ class Base:
             return "[]"
         data = json.dumps(list_dictionaries)
         return data
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+
+        """class method that saves json rep of pthon obj to file"""
+
+        data = to_json_string(list_objs) if list_objs is not None > 0 else []
+
+        filename = f"{cls.__name__}.json"
+
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(data, f)
