@@ -20,7 +20,7 @@ class Square(Rectangle):
 
         """function to return a str"""
 
-        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
@@ -42,7 +42,7 @@ class Square(Rectangle):
         """function to update params"""
 
         attributes = ['id', 'size', 'x', 'y']
-        if args is not None and len(args > 0):
+        if args is not None and len(args) > 0:
             for i, arg in enumerate(args):
                 if i < len(attributes) and arg is not None:
                     setattr(self, attributes[i], arg)
