@@ -62,13 +62,7 @@ class Base:
         """function to returns an instance with all
         attributes set using **dictionary"""
 
-        if cls.__name__ == "Rectangle":
-            dummy_instance = cls(1, 1)
-        elif cls.__name__ == "Square":
-            dummy_instance = cls(1)
-        else:
-            raise NotImplementedError("create method not implemented \
-                    for class {}".format(cls.__name__))
+        dummy_instance = cls(1, 1)   
 
         dummy_instance.update(**dictionary)
         return dummy_instance
