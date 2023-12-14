@@ -56,7 +56,7 @@ class Base:
         else:
             return []
 
-    @staticmethod
+    @classmethod
     def create(cls, **dictionary):
 
         """
