@@ -79,16 +79,15 @@ class Base:
     def load_from_file(cls):
         """Loads instance from class"""
         filename = cls.__name__ + ".json"
+        instance = []
 
         try:
             with open(filename, "r", encoding="UTF-8") as textfile:
                 json_string = textfile.read()
+                save_dicts = cls.from_json_string(json_string)
+                for item in save_dicts:
+                    instance.append(cls.create(**item))
         except FileNotFoundError:
-            return []
+            pass
 
-        if not json_string:
-            return []
-
-        json_list = json.loads(json_string)
-        instances = [cls.create(**data) for data in json_list]
-        return instances
+        return instance
