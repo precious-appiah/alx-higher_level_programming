@@ -1,2 +1,2 @@
 -- script to return first record
-SELECT * FROM first_table LIMIT;
+SELECT * FROM first_table;
