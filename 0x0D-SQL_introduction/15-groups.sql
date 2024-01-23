@@ -1,5 +1,6 @@
 -- return 
-SELECT score, COUNT(*) as count_of_occurrences
+SELECT score, COUNT(*) as number
 FROM second_table
-GROUP BY number
-HAVING COUNT(*) > 1;
+GROUP BY score
+HAVING COUNT(*) > 1
+ORDER BY number DESC;
