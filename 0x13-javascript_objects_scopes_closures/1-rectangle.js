@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectancle {
-  constructor (h, w) {
+  constructor (w, h) {
     this.height = h;
     this.width = w;
   }
