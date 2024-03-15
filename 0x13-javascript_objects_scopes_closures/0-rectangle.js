@@ -1,4 +1,4 @@
-#!/usr/bin/node 
-class Rectancle{
-    
+#!/usr/bin/node
+class Rectancle {
+
 }
