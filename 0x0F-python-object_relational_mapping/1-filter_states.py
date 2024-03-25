@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# queries data starting with 'N'
+"""queries data starting with 'N' """
 
 import MySQLdb
 from sys import argv
