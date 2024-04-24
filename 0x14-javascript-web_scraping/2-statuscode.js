@@ -6,5 +6,5 @@ request(argv[2], (error, response) => {
     console.log(error);
     return;
   }
-  console.log('code:',response && response.statusCode);
+  console.log('code:', response && response.statusCode);
 });
