@@ -10,10 +10,10 @@ request(`${argv[2]}`, (error, response, body) => {
   let result = JSON.parse(body);
   result = result?.results;
   let sum = 0;
-  for (let i in result) {
+  for (const i in result) {
     const comp = result[i].characters;
-    for (let x in comp) {
-      if (comp[x] == 'https://swapi-api.alx-tools.com/api/people/18/') {
+    for (const x in comp) {
+      if (comp[x] === 'https://swapi-api.alx-tools.com/api/people/18/') {
         sum += 1;
       }
     }
