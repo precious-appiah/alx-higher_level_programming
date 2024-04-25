@@ -8,10 +8,7 @@ request(`${argv[2]}`, (error, response, body) => {
     console.log(error);
     return;
   }
-  console.log(argv[3]);
-  fs.writeFile(`${argv[3]}`, body, (error) => {
-    if (error) {
-      console.log(error);
-    }
+  fs.writeFile(`${argv[3]}`, body, 'utf-8', (error) => {
+    if (error) console.log(error);
   });
 });
